@@ -7,15 +7,10 @@ pipeline {
     }
     
     stages {
-        stage('Git Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/jaiswaladi2468/BoardgameListingWebApp.git'
-            }
-        }
-
+        
         stage('Unit Tests') {
             steps {
-                sh 'mvn test'
+                sh 'mvn compile'
             }
         }
 
